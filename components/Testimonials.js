@@ -1,8 +1,8 @@
 export default function Testimonials() {
   const feedback = [
-    { name: "Glazy Rae", text: "Their 3D printing services are excellent and affordable." },
-    { name: "Classmate", text: "The POS system helped me with my thesis presentation." },
-    { name: "Startup Founder", text: "ObraTech delivered our prototype quickly and reliably." },
+    { name: "3D Printing Client", text: "Their 3D printing services are excellent and affordable." },
+    { name: "Researcher", text: "The face attendance is accurate and was delivered fast." },
+    { name: "SME Owner", text: "They customized a POS and inventory system for our shop—easy to use, reliable, and fits our budget." },
   ]
 
   return (

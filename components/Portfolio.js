@@ -3,19 +3,19 @@ import Image from "next/image";
 export default function Portfolio() {
   const projects = [
     {
-      title: "POS System",
+      title: "POS System ",
       category: "Software Development",
-      images: ["/portfolio/pos1.jpg", "/portfolio/pos2.jpg", "/portfolio/pos3.jpg"],
+      images: ["/portfolio/pos1.png", "/portfolio/pos2.png", "/portfolio/pos3.jpg"],
     },
     {
-      title: "3D Printed Phone Stand",
+      title: "3D Printed Materials",
       category: "3D Printing",
       images: ["/portfolio/print1.jpg", "/portfolio/print2.jpg", "/portfolio/print3.jpg"],
     },
     {
-      title: "Smart Cane",
+      title: "Smart Flood Track",
       category: "Arduino/Hardware",
-      images: ["/portfolio/arduino1.jpg", "/portfolio/arduino2.jpg", "/portfolio/arduino3.jpg"],
+      images: ["/portfolio/arduino1.JPG", "/portfolio/arduino2.JPG", "/portfolio/arduino3.jpg"],
     },
   ];
 
