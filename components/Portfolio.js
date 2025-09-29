@@ -25,7 +25,7 @@ export default function Portfolio() {
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold mb-4">Our Portfolio Projects</h2>
           <p className="text-lg text-gray-300 max-w-2xl mx-auto">
-            A behind-the-scenes look into the systems and prototypes we've built.
+            A behind-the-scenes look into the systems and prototypes we&apos;ve built.
           </p>
         </div>
 
