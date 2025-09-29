@@ -1,5 +1,5 @@
 import { useState } from "react";
-import emailjs from "emailjs-com";
+import emailjs from "@emailjs/browser";
 
 export default function Contact() {
   const [status, setStatus] = useState("");
@@ -29,47 +29,67 @@ export default function Contact() {
   return (
     <section
       id="contact"
-      className="py-20 bg-brand-blue text-white text-center px-6"
+      className="section-padding gradient-bg text-white text-center"
     >
-      <h2 className="text-3xl font-bold mb-6">Contact Us</h2>
-      <form
-        onSubmit={sendEmail}
-        className="max-w-xl mx-auto space-y-4 bg-white p-4 md:p-6 rounded-xl text-brand-blue"
-      >
-        <input
-          type="text"
-          name="name"
-          placeholder="Name"
-          className="w-full border p-3 rounded text-sm md:text-base"
-          required
-        />
-        <input
-          type="email"
-          name="email"
-          placeholder="Email"
-          className="w-full border p-3 rounded text-sm md:text-base"
-          required
-        />
-        <textarea
-          name="message"
-          placeholder="Message"
-          rows="4"
-          className="w-full border p-3 rounded text-sm md:text-base"
-          required
-        ></textarea>
-        <button
-          type="submit"
-          className="bg-brand-blue text-white px-4 md:px-6 py-2 md:py-3 rounded-lg hover:bg-blue-800"
-        >
-          Send Message
-        </button>
-      </form>
+      <div className="container-custom">
+        <div className="max-w-2xl mx-auto">
+          <h2 className="text-4xl md:text-5xl font-bold mb-4">Contact Us</h2>
+          <p className="text-lg text-gray-300 mb-12">
+            Ready to start your project? Get in touch with us today!
+          </p>
+          
+          <form
+            onSubmit={sendEmail}
+            className="space-y-6 bg-white dark:bg-gray-800 p-8 rounded-2xl shadow-lg text-brand-blue dark:text-white"
+          >
+            <input
+              type="text"
+              name="name"
+              placeholder="Your Name"
+              className="w-full border border-gray-300 dark:border-gray-600 p-4 rounded-lg text-sm md:text-base bg-white dark:bg-gray-700 text-gray-900 dark:text-gray-100 focus:outline-none focus:ring-2 focus:ring-brand-blue"
+              required
+            />
+            <input
+              type="email"
+              name="email"
+              placeholder="Your Email"
+              className="w-full border border-gray-300 dark:border-gray-600 p-4 rounded-lg text-sm md:text-base bg-white dark:bg-gray-700 text-gray-900 dark:text-gray-100 focus:outline-none focus:ring-2 focus:ring-brand-blue"
+              required
+            />
+            <textarea
+              name="message"
+              placeholder="Your Message"
+              rows="5"
+              className="w-full border border-gray-300 dark:border-gray-600 p-4 rounded-lg text-sm md:text-base bg-white dark:bg-gray-700 text-gray-900 dark:text-gray-100 focus:outline-none focus:ring-2 focus:ring-brand-blue"
+              required
+            ></textarea>
+            <button
+              type="submit"
+              className="btn-primary w-full text-lg py-4"
+            >
+              Send Message
+            </button>
+          </form>
 
-      {status && <p className="mt-4">{status}</p>}
+          {status && (
+            <div className="mt-6 p-4 bg-white/10 rounded-lg">
+              <p className="text-lg">{status}</p>
+            </div>
+          )}
 
-      <p className="mt-6 text-gray-200">
-        📍 Location: Magapit, Lal-lo, Cagayan, Philippines
-      </p>
+          <div className="mt-12 grid md:grid-cols-2 gap-8 text-center">
+            <div className="bg-white/10 p-6 rounded-lg">
+              <h3 className="text-xl font-semibold mb-2">📍 Location</h3>
+              <p className="text-gray-300">Magapit, Lal-lo, Cagayan, Philippines</p>
+            </div>
+            <div className="bg-white/10 p-6 rounded-lg">
+              <h3 className="text-xl font-semibold mb-2">📞 Contact Info</h3>
+              <p className="text-gray-300">obratech18@gmail.com</p>
+              <p className="text-gray-300">09568618070</p>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
   );
 }
