@@ -1,7 +1,39 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
 html, body {
   width: 100%;
   overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+@layer components {
+  .gradient-bg {
+    background: linear-gradient(135deg, #1B2A49 0%, #2C3E50 100%);
+  }
+  
+  .dark .gradient-bg {
+    background: linear-gradient(135deg, #0F172A 0%, #1E293B 100%);
+  }
+  
+  .card-hover {
+    @apply transition-all duration-300 hover:shadow-xl hover:-translate-y-1;
+  }
+  
+  .btn-primary {
+    @apply bg-brand-yellow text-brand-blue font-semibold px-6 py-3 rounded-lg hover:bg-yellow-400 transition-colors duration-200;
+  }
+  
+  .btn-secondary {
+    @apply bg-transparent border-2 border-brand-yellow text-brand-yellow font-semibold px-6 py-3 rounded-lg hover:bg-brand-yellow hover:text-brand-blue transition-all duration-200;
+  }
+  
+  .section-padding {
+    @apply py-16 md:py-20;
+  }
+  
+  .container-custom {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
 }
